@@ -1,0 +1,1 @@
+module apps.warehouse.tests;
