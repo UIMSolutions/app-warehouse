@@ -1,1 +1,1 @@
-module apps.myname.views.forms;
+module apps.warehouse.views.forms;
