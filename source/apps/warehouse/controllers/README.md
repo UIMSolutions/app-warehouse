@@ -1,2 +1,2 @@
-# Package 📦 apps-warehouse.controllers
+# Package 📦 apps.warehouse.controllers
 
