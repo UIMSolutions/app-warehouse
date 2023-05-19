@@ -35,6 +35,6 @@ static this() {
   warehouseApp = App
     .name("warehouseApp")
     .rootPath("/apps/warehouse")
-    .addRoute(Route("", HTTPMethod.GET, MYNAMEIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, MYNAMEIndexPageController));
+    .addRoute(Route("", HTTPMethod.GET, WHSIndexPageController))
+    .addRoute(Route("/", HTTPMethod.GET, WHSIndexPageController));
 }

@@ -8,14 +8,14 @@ module apps.warehouse.controllers.pages.index;
 import apps.warehouse;
 @safe:
 
-class DMYNAMEIndexPageController : DAPPPageController {
-  mixin(ControllerThis!("MYNAMEIndexPageController"));
+class DWHSIndexPageController : DAPPPageController {
+  mixin(ControllerThis!("WHSIndexPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .view(MYNAMEIndexView(this));
+      .view(WHSIndexView(this));
   }
 }
-mixin(ControllerCalls!("MYNAMEIndexPageController"));
+mixin(ControllerCalls!("WHSIndexPageController"));
