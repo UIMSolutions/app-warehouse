@@ -1,3 +1,3 @@
-# Package 📦 apps.myname.views.forms.footers
+# Package 📦 apps.warehouse.views.forms.footers
 
 
