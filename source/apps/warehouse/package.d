@@ -30,11 +30,11 @@ public {
   import apps.warehouse.views;
 }
 
-DApp warehouseApp;
 static this() {
-  warehouseApp = App
+  AppRegistry.register("apps.warehouse",  
+    App
     .name("warehouseApp")
     .rootPath("/apps/warehouse")
     .addRoute(Route("", HTTPMethod.GET, WHSIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, WHSIndexPageController));
+    .addRoute(Route("/", HTTPMethod.GET, WHSIndexPageController)));
 }
