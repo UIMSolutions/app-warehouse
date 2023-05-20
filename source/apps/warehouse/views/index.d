@@ -8,11 +8,11 @@ module apps.warehouse.views.index;
 import apps.warehouse;
 @safe:
 
-class DWHSIndexView : DView {
-  mixin(ViewThis!("WHSIndexView"));
+class DIndexView : DView {
+  mixin(ViewThis!("IndexView"));
 
   override DH5Obj[] toH5(STRINGAA options = null) {
-    debugMethodCall(moduleName!DWHSIndexView~":DWHSIndexView("~this.name~")::toH5");
+    debugMethodCall(moduleName!DIndexView~":DIndexView("~this.name~")::toH5");
     super.toH5(options);
 
     return [
@@ -20,4 +20,4 @@ class DWHSIndexView : DView {
     ].toH5;
   }
 }
-mixin(ViewCalls!("WHSIndexView"));
+mixin(ViewCalls!("IndexView"));
