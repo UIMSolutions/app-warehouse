@@ -8,7 +8,7 @@ module apps.warehouse.controllers.pages.error;
 import apps.warehouse;
 @safe:
 
-class DWHSErrorPageController : DAPPPageController {
+class DWHSErrorPageController : DPageController {
   mixin(ControllerThis!("WHSErrorPageController"));
 
   override void initialize(Json configSettings = Json(null)) {

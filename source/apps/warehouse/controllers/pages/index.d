@@ -8,7 +8,7 @@ module apps.warehouse.controllers.pages.index;
 import apps.warehouse;
 @safe:
 
-class DIndexPageController : DAPPPageController {
+class DIndexPageController : DPageController {
   mixin(ControllerThis!("IndexPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
