@@ -35,6 +35,7 @@ static this() {
     App
     .name("warehouseApp")
     .rootPath("/apps/warehouse")
+                       .importTranslations()
     .addRoute(Route("", HTTPMethod.GET, IndexPageController))
     .addRoute(Route("/", HTTPMethod.GET, IndexPageController)));
 }
