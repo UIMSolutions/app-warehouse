@@ -32,10 +32,11 @@ public {
 
 static this() {
   AppRegistry.register("apps.warehouse",  
-    App
-    .name("warehouseApp")
-    .rootPath("/apps/warehouse")
-                       .importTranslations()
-    .addRoute(Route("", HTTPMethod.GET, IndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, IndexPageController)));
+    App("warehouseApp", "/apps/warehouse")
+      .importTranslations()
+      .addRoutes(
+        Route("", HTTPMethod.GET, IndexPageController),
+        Route("/", HTTPMethod.GET, IndexPageController)
+      )
+    );
 }
