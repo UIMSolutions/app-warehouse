@@ -7,8 +7,10 @@ module apps.warehouse;
 
 mixin(ImportPhobos!());
 
-// Dub
-public import vibe.d;
+// External
+public {
+  import vibe.d;
+}
 
 // UIM
 public import uim.core;
@@ -31,12 +33,18 @@ public {
 }
 
 static this() {
-  AppRegistry.register("apps.warehouse",  
-    App("warehouseApp", "/apps/warehouse")
-      .importTranslations()
-      .addRoutes(
-        Route("", HTTPMethod.GET, IndexPageController),
-        Route("/", HTTPMethod.GET, IndexPageController)
-      )
+  auto myApp = App("warehouseApp", "apps/warehouse");
+
+  with(myApp) {
+    importTranslations;
+    addControllers([
+      "wh.index": IndexPageController
+    ]);
+    addRoutes(
+      Route("", HTTPMethod.GET, controller("wh.index")),
+      Route("/", HTTPMethod.GET, controller("wh.index"))
     );
+  }
+
+  AppRegistry.register("apps.warehouse", myApp);
 }
